@@ -8,6 +8,8 @@ Clone the repository, and install the dependancies.
 
 `git clone $url`
 
+`cd Garden`
+
 `npm install`
 
 ## Development server
