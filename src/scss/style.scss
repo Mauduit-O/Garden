@@ -1,0 +1,91 @@
+@import "global/reset.scss";
+@import "global/variables.scss";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  @include flexbox(center);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: $fontSizeBody;
+}
+.container {
+  width: 65%;
+  margin-top: 8vh;
+  text-align: center;
+  @include flexbox(wrap, center);
+}
+
+.btnStart {
+  width: 47vw;
+  height: 80%;
+  margin-bottom: 3%;
+  border: none;
+  color: whitesmoke;
+  background-color: $brown;
+  font-size: $fontSizeBtn;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.garden {
+  width: 65%;
+  border: 1rem solid $brown;
+  text-align: left;
+  background-color: $backgroundColorGarden;
+  @include flexbox(wrap, center);
+}
+
+.lawn,
+.lawnMowed {
+  @include format_vw-vh;
+  margin: $marginLawn;
+}
+
+.lawn {
+  background-color: $colorLawn;
+}
+
+.lawnMowed {
+  background-color: $colorLawnMowed;
+}
+
+.mower {
+  &N,
+  &E,
+  &W,
+  &S {
+    @include format_vw-vh;
+    margin-top: 0.1rem;
+    margin-right: 0.1rem;
+    background-color: $brown;
+  }
+
+  &N {
+    clip-path: $mowerN;
+  }
+  &E {
+    clip-path: $mowerE;
+  }
+  &W {
+    clip-path: $mowerW;
+  }
+  &S {
+    clip-path: $mowerS;
+  }
+}
+
+.response {
+  width: 100%;
+  margin-top: 3%;
+  @include flexbox(wrap, center);
+}
+
+.response__Position {
+  width: 65%;
+  margin-bottom: 3%;
+  padding: 1.5vh;
+  border: 0.8rem solid $brown;
+  color: $brown;
+}

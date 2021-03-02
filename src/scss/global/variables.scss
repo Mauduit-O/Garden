@@ -1,0 +1,29 @@
+//************************* $ *************************//
+
+$fontSizeBody: 1.1rem;
+$fontSizeBtn: 1.8rem;
+
+$brown: #4d2616;
+$backgroundColorGarden: #007c03;
+$colorLawn: #006603;
+$colorLawnMowed: #005502;
+
+$marginLawn: 0.1rem 0.1rem 0.1rem 0;
+
+$mowerN: polygon(0 30%, 52% 0, 100% 30%, 100% 100%, 0 100%);
+$mowerE: polygon(70% 0, 100% 50%, 100% 50%, 70% 100%, 0 100%, 0 0);
+$mowerW: polygon(30% 0, 100% 0, 100% 100%, 30% 100%, 0 50%, 0 50%);
+$mowerS: polygon(0 0, 100% 0, 100% 73%, 53% 100%, 53% 100%, 0 73%);
+
+//************************* MIXINS *************************//
+
+@mixin flexbox($flex: wrap, $justify: center) {
+  display: flex;
+  flex-wrap: $flex;
+  justify-content: $justify;
+}
+
+@mixin format_vw-vh {
+  width: 7vw;
+  height: 9vh;
+}
